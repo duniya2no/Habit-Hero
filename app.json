@@ -1,0 +1,95 @@
+{
+  "expo": {
+    "name": "Habit Hero",
+    "slug": "habithero",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/HabitHero icon.png",
+    "scheme": "habit",
+    "description": "Habit Hero is a beautifully designed habit tracking app that helps you build and maintain positive routines through gamification, visual progress tracking, and personalized reminders. Track multiple habits, monitor your daily completions, and watch your streaks grow as you work towards your goals. Features include customizable habit reminders, achievement unlocks, streak tracking, detailed statistics, and a clean, intuitive interface. Whether you want to drink more water, exercise regularly, read daily, or develop any positive habit, Habit Hero makes it easy and rewarding to stay consistent. Build better habits, one day at a time, and become the hero of your own story.",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.habithero.app",
+      "buildNumber": "7",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "NSPhotoLibraryUsageDescription": "Habit Hero needs access to your photo library so you can choose a profile picture from your gallery.",
+        "NSCameraUsageDescription": "Habit Hero needs access to your camera so you can take a photo for your profile picture.",
+        "NSUserNotificationsUsageDescription": "Habit Hero needs notification permission to send you reminders about your habits and help you maintain your streaks."
+      }
+    },
+    "android": {
+      "package": "com.habithero.app",
+      "versionCode": 7,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/HabitHero icon.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "notification": {
+        "icon": "./assets/images/HabitHero icon.png",
+        "color": "#E6F4FE"
+      }
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/HabitHero icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/HabitHero icon.png",
+          "color": "#E6F4FE",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Habit Hero needs access to your photos so you can select a profile picture from your gallery.",
+          "cameraPermission": "Habit Hero needs access to your camera so you can take a photo for your profile picture."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "636e545f-42e9-4bc7-bfc5-d36cd6c3d4fe"
+      }
+    }
+  }
+}
